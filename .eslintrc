@@ -1,0 +1,79 @@
+{
+    "extends": "standard",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true,
+            "modules": true,
+            "experimentalObjectRestSpread": true,
+            "experimentalDecorators": true,
+            "sourceType": "module",
+            "allowImportExportEverywhere": false,
+            "codeFrame": false
+
+        },
+        "sourceType": "module",
+        "ecmaVersion": 8
+    },
+    "env": {
+        "es6": true,
+        "jest": true,
+        "node": true,
+        "mocha": true
+
+    },
+    "plugins": [
+        "react"
+    ],
+    "parser": "babel-eslint",
+    "rules": {
+        "strict": 0,
+        "prefer-arrow-callback": 1,
+        "semi": 1,
+        "import/newline-after-import": "off",
+        "no-unused-vars": 0,
+        "camelcase": 2,
+        "quotes": [1, "single"],
+        "no-debugger": "off",
+        "no-console": "off",
+        "no-tabs": "off",
+        "no-case-declarations": "off",
+        "no-duplicate-imports": "warn",
+        "jsx-quotes": ["error", "prefer-single"],
+        "no-else-return": "warn",
+        "no-extra-parens": "warn",
+        "no-extra-semi": "warn",
+        "constructor-super": "warn",
+        "no-useless-escape": "off",
+        "quote-props": [2, "consistent-as-needed"],
+        "no-ternary": 0,
+        "newline-per-chained-call": 0,
+        "arrow-body-style": 0,
+        "no-warning-comments": 0,
+        "max-len": [1, 200],
+        "space-before-function-paren": [1, "always"],
+        "indent": [2, 2, { "SwitchCase": 1 }],
+        "object-shorthand": [2, "always"],
+        "prefer-const": 0,
+        "comma-dangle": 0,
+        "spaced-comment": 1,
+        "object-curly-spacing": 0,
+        "arrow-spacing": [1, {
+            "before": true,
+            "after": true
+        }],
+        "no-restricted-syntax": 0
+    },
+
+    "globals": {
+        "document": true,
+        "window": true,
+        "module": true,
+        "__dirname": true,
+        "console": true,
+        "localStorage": true,
+        "it": true,
+        "describe": true,
+        "google": true,
+        "search": true
+    }
+}

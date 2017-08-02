@@ -1,0 +1,20 @@
+//Fonts
+@mixin open-sans-light() {
+    font-family: $open-sans;
+    font-weight: 300;
+}
+
+@mixin open-sans-regular() {
+    font-family: $open-sans;
+    font-weight: 400;
+}
+
+@mixin open-sans-semi-bold() {
+    font-family: $open-sans;
+    font-weight: 600;
+}
+
+@mixin open-sans-bold() {
+    font-family: $open-sans;
+    font-weight: 700;
+}
