@@ -14,7 +14,7 @@ module.exports = {
     port: 8080,
     contentBase: './public'
   },
-  devtool: 'eval-source-map',
+  devtool: 'source-map',
   resolve: {
     extensions: ['.css', '.scss', '.js', '.jsx'],
     alias: {
@@ -47,6 +47,11 @@ module.exports = {
   },
   plugins: [
     extractTextPlugin,
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify('production')
+      }
+    }),
     new webpack.optimize.UglifyJsPlugin({
       cacheFolder: resolve(`${__dirname}'public'`),
       debug: true,
