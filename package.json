@@ -44,12 +44,10 @@
         "extract-text-webpack-plugin": "^2.1.2",
         "file-loader": "^0.11.2",
         "node-sass": "^4.5.3",
-        "postcss-loader": "^2.0.6",
-        "raw-loader": "^0.5.1",
-        "react-addons-test-utils": "^15.6.0",
         "react-logger": "^1.1.0",
         "redux-immutable-state-invariant": "^2.0.0",
         "redux-promise": "^0.5.3",
+        "resolve-url-loader": "^2.1.0",
         "sass-loader": "^6.0.5",
         "snazzy": "^7.0.0",
         "style-loader": "^0.18.2",
@@ -58,15 +56,11 @@
         "webpack-dev-server": "^2.4.5"
     },
     "dependencies": {
-        "axios": "^0.16.2",
-        "bootstrap": "^3.3.7",
-        "deep-freeze": "0.0.1",
         "react": "^15.6.1",
         "react-css-modules": "^4.6.0",
-        "react-dom": "^15.5.4",
+        "react-dom": "^15.6.1",
         "react-redux": "^5.0.5",
-        "redux": "^3.6.0",
-        "redux-thunk": "^2.2.0",
-        "resolve-url-loader": "^2.1.0"
+        "redux": "^3.7.2",
+        "redux-thunk": "^2.2.0"
     }
 }

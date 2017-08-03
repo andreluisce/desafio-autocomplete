@@ -16,7 +16,7 @@ module.exports = {
   },
   devtool: 'source-map',
   resolve: {
-    extensions: ['.css', '.scss', '.js', '.jsx'],
+    extensions: ['.js', '.jsx'],
     alias: {
       modules: resolve(__dirname, '/node_modules')
     }
@@ -25,10 +25,14 @@ module.exports = {
     rules: [
       {
         test: /\.jsx?$/,
-        use: [
-          'babel-loader'
-        ],
-        exclude: /node_modules/
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['es2015', 'stage-0', 'react'],
+            plugins: ['transform-object-rest-spread', 'transform-decorators-legacy', 'transform-class-properties']
+          }
+        }
       },
       {
         test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
