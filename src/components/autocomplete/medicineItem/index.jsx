@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import CSSModules from 'react-css-modules'
 
-import Price from '../price'
+import Price from './price'
 import styles from './medicineItem.scss'
 
 @CSSModules(styles)

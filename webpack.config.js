@@ -42,7 +42,7 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
-        use: 'url-loader?limit=100000'
+        use: 'url-loader?limit=1'
       },
       {
         test: /\.scss$/,

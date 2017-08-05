@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
 import Autocomplete from '../components/autocomplete'
+import Prescription from '../components/prescription'
 
 class App extends Component {
   render () {
     return (
       <div className='container'>
-        <h2 className='text-center'> Prescrição </h2>
         <div className='row'>
           <div className='col-10'>
+            <Prescription />
             <Autocomplete />
           </div>
         </div>

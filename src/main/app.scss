@@ -1,0 +1,5 @@
+@import '../styles/_mixins.scss';
+.h2 {
+    font-size: 2em;
+    @include open-sans-semi-bold();
+}
