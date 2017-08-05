@@ -1,0 +1,10 @@
+@import "../../../styles/_variables.scss";
+@import "../../../styles/_mixins.scss";
+.textbox {
+    width: 600px;
+    height: 350px;
+    padding: 20px;
+    line-height: 25px;
+    border-radius: 5px;
+    @include open-sans-bold();
+}
