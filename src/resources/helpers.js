@@ -5,7 +5,7 @@ import thunk from 'redux-thunk'
 
 import reducers from '../reducers/mainReducer'
 
-export default function getStore () {
+export const getStore = () => {
   const middleware = process.env.NODE_ENV !== 'production'
     ? [require('redux-immutable-state-invariant').default(), promise, thunk]
     : [promise, thunk]
@@ -20,4 +20,10 @@ export default function getStore () {
       applyMiddleware(...middlewares)
     )
   )
+}
+
+export const PriceFormat = (price) => {
+  let fullString = price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL', minimumFractionDigits: 2 })
+
+  return fullString
 }

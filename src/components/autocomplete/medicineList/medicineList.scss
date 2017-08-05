@@ -1,0 +1,8 @@
+@import "../../../styles/_variables.scss";
+@import "../../../styles/_mixins.scss";
+.item {
+    max-height: 310px;
+    overflow-x: auto;
+    padding: 0 15px;
+    margin-left: 20px;
+}

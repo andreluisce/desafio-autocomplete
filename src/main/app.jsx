@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Autocomplete from '../components/autocomplete'
 
 class App extends Component {
   render () {
@@ -7,7 +8,7 @@ class App extends Component {
         <h2 className='text-center'> Prescrição </h2>
         <div className='row'>
           <div className='col-10'>
-            <textarea width='100%' />
+            <Autocomplete />
           </div>
         </div>
       </div >

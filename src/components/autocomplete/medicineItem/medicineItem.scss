@@ -1,0 +1,40 @@
+@import "../../../styles/_variables.scss";
+@import "../../../styles/_mixins.scss";
+.item {
+    display: flex;
+    margin-top: 15px;
+}
+
+.image {
+    width: 34px !important;
+    height: 34px !important;
+    border: solid 2px $lighter-gray;
+    overflow: hidden;
+    border-radius: 50%;
+    img {
+        width: 70%;
+        position: absolute;
+        left: 4px;
+        border: 1px solid #eaeaea;
+    }
+}
+
+.nome {
+    font-size: 1em;
+}
+
+.principioAtivo {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.principioAtivo,
+.titularidade {
+    font-size: .85em;
+    color: $lighter-gray;
+}
+
+.fabricante {
+    font-size: .9em
+}

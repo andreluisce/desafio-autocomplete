@@ -1612,6 +1612,10 @@
         margin-right: -15px;
         margin-left: -15px;
     }
+    .row-no-padding>[class*="col-"] {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
     .col-xs-1,
     .col-sm-1,
     .col-md-1,

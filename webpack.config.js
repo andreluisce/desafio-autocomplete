@@ -3,7 +3,10 @@ const webpack = require('webpack')
 const extractTextPlugin = new (require('extract-text-webpack-plugin'))({ filename: 'app.css' })
 
 module.exports = {
-  entry: ['babel-polyfill', './src/index.jsx'],
+  entry: ['babel-polyfill',
+    'react-hot-loader/patch',
+    'webpack/hot/only-dev-server',
+    './src/index.jsx'],
   output: {
     filename: 'app.js',
     path: resolve(`${__dirname}/public`),
@@ -30,7 +33,10 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: ['es2015', 'stage-0', 'react'],
-            plugins: ['transform-object-rest-spread', 'transform-decorators-legacy', 'transform-class-properties']
+            plugins: ['transform-object-rest-spread',
+              'transform-decorators-legacy',
+              'transform-class-properties',
+              'react-hot-loader/babel']
           }
         }
       },
@@ -50,6 +56,7 @@ module.exports = {
     ]
   },
   plugins: [
+    new webpack.HotModuleReplacementPlugin(),
     extractTextPlugin,
     new webpack.DefinePlugin({
       'process.env': {

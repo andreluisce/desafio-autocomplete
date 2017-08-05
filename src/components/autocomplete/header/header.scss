@@ -1,0 +1,22 @@
+    @import "../../../styles/_variables.scss";
+    @import "../../../styles/_mixins.scss";
+    header {
+        position: relative;
+    }
+    
+    nav {
+        padding: 10px 0;
+        border-bottom: 1px $lighter-gray solid;
+        text-align: center;
+        ul li {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 3px;
+            @include open-sans-semi-bold();
+        }
+    }
+    
+    .selected {
+        background-color: $dark-gray;
+        color: $white;
+    }

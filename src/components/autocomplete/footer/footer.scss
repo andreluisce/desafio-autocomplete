@@ -1,0 +1,43 @@
+    @import "../../../styles/_variables.scss";
+    @import "../../../styles/_mixins.scss";
+    .footer {
+        display: flex;
+        align-items: flex-start;
+        padding: 5px 5px;
+        height: 90px;
+        border-top: 1px solid $lighter-gray;
+        margin: 0px !important;
+        input {
+            align-self: center;
+            font-size: 1.1em;
+            margin-left: -5px;
+            @include open-sans-semi-bold();
+            border: 1px solid $white;
+        }
+    }
+    
+    .footerLogo {
+        align-self: center;
+        margin-left: -5px;
+        div {
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            background-color: $lighter-gray;
+            font-size: 20px;
+            margin: 0 auto;
+            text-align: center;
+            @include open-sans-bold();
+        }
+    }
+    
+    .copyright {
+        text-align: right;
+        color: $light-gray;
+        font-size: .85em;
+        align-self: flex-end;
+        b {
+            @include open-sans-semi-bold();
+            color: $black;
+        }
+    }

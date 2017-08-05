@@ -1,0 +1,15 @@
+@import "../../../styles/_variables.scss";
+@import "../../../styles/_mixins.scss";
+.price {
+    align-self: center;
+    text-align: right;
+}
+
+.priceFrom {
+    @include open-sans-semi-bold();
+}
+
+.priceTo {
+    font-size: .9em;
+    color: $lighter-gray;
+}
