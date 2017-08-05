@@ -16,18 +16,9 @@
         }
     }
     
-    .footerLogo {
-        align-self: center;
-        margin-left: -5px;
-        div {
-            height: 30px;
-            width: 30px;
-            border-radius: 50%;
-            background-color: $lighter-gray;
-            font-size: 20px;
-            margin: 0 auto;
-            text-align: center;
-            @include open-sans-bold();
+     :global {
+        .iconAjusting {
+            margin: 0 15px !important;
         }
     }
     
