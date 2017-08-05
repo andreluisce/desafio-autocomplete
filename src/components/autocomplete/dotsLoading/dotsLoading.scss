@@ -1,21 +1,37 @@
-.loading {
+@import '../../../styles/_variables.scss';
+.loading,
+.spinner:before {
+    box-sizing: border-box;
     position: absolute;
     font-size: 15px;
     right: 14px;
     top: 12px;
-    border: 1px #ccc solid;
+    border: 1px $lighter-gray solid;
     border-radius: 50%;
     width: 25px;
     height: 25px;
-    color: #aaa;
+    color: $light-gray;
     line-height: 15px;
     padding-left: 5px;
 }
 
 .loading:after {
     display: inline-block;
-    animation: dotty steps(1, end) 1s infinite;
+    //animation: dotty steps(1, end) 1.5s infinite;
+    content: '...';
+}
+
+.spinner:before {
     content: '';
+    border-top: 2px solid $light-gray;
+    border-right: 2px solid transparent;
+    animation: spinner .6s cubic-bezier(0, 0, 0.59, 0.79) infinite;
+}
+
+@keyframes spinner {
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes dotty {

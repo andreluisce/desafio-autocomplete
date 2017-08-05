@@ -7,7 +7,11 @@ import styles from './dotsLoading.scss'
 class DotsLoading extends Component {
   render () {
     return (
-      <div styleName='loading'></div>
+      <div>
+        <div styleName='loading'></div>
+        <div styleName='spinner'></div>
+      </div>
+
     )
   }
 }
