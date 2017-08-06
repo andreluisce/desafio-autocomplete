@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import CSSModules from 'react-css-modules'
 
 import styles from './dotsLoading.scss'
@@ -9,11 +10,17 @@ class DotsLoading extends Component {
     return (
       <div>
         <div styleName='loading'></div>
-        <div styleName='spinner'></div>
-      </div>
-
+        <div className={`${styles.spinner} ${this.props.loading ? styles.show : styles.hide}`}></div>
+      </div >
     )
   }
 }
 
-export default DotsLoading
+const mapStateToProps = state => {
+  return (
+    {
+      loading: state.fetchingSearch
+    })
+}
+
+export default connect(mapStateToProps)(DotsLoading)

@@ -3,10 +3,7 @@ const webpack = require('webpack')
 const extractTextPlugin = new (require('extract-text-webpack-plugin'))({ filename: 'app.css' })
 
 module.exports = {
-  entry: ['babel-polyfill',
-    'react-hot-loader/patch',
-    'webpack/hot/only-dev-server',
-    './src/index.jsx'],
+  entry: ['babel-polyfill', './src/index.jsx'],
   output: {
     filename: 'app.js',
     path: resolve(`${__dirname}/public`),

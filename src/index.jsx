@@ -1,11 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-
+import { Provider } from 'react-redux'
 import App from './main/app'
+
+import { getStore } from './resources/helpers.js'
 
 import './styles/main.scss'
 
+const store = getStore()
 ReactDOM.render(
-  <div>
-    <App />
-  </div>, document.querySelector('[data-js="app"]'))
+  <Provider store={store} >
+    < App />
+  </Provider>, document.querySelector('[data-js="app"]'))

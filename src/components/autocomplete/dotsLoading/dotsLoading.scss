@@ -15,9 +15,16 @@
     padding-left: 5px;
 }
 
+.hide {
+    display: none
+}
+
+.show {
+    display: block
+}
+
 .loading:after {
-    display: inline-block;
-    //animation: dotty steps(1, end) 1.5s infinite;
+    display: inline-block; //animation: dotty steps(1, end) 1.5s infinite;
     content: '...';
 }
 
