@@ -6,15 +6,12 @@ module.exports = {
   entry: ['babel-polyfill', './src/index.jsx'],
   output: {
     filename: 'app.js',
-    path: resolve(`${__dirname}/public`),
-    publicPath: '/'
-
+    path: resolve(`${__dirname}/public`)
   },
   devServer: {
     port: 8080,
     contentBase: './public'
   },
-  devtool: 'source-map',
   resolve: {
     extensions: ['.js', '.jsx'],
     alias: {
@@ -43,18 +40,26 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use: [
-          'style-loader',
-          'css-loader?importLoaders=1&modules&localIdentName=[path]___[name]__[local]___[hash:base64:5]',
-          'sass-loader?sourceMap'
-        ]
+        use: extractTextPlugin.extract({
+          use: [
+            'css-loader?importLoaders=1&modules&localIdentName=[path]___[name]__[local]___[hash:base64:5]',
+            'sass-loader?sourceMap'
+          ]
+        })
       }
     ]
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
+    extractTextPlugin,
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('development')
+      'process.env.NODE_ENV': JSON.stringify('production')
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      cacheFolder: resolve(`${__dirname}'public'`),
+      debug: true,
+      compress: { warnings: false },
+      output: { comments: false },
+      sourceMap: true
     })
   ]
 }
