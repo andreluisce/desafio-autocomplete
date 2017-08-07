@@ -8,9 +8,9 @@ class Footer extends Component {
   render () {
     return (
       <footer className='row row-no-padding' styleName='footer'>
-        <Icon iconAjusting='iconAjusting' iconType='iconSearch' />
-        <input className='col-md-7' placeholder='Adicionar Texto Livre' />
-        <div className='col-md-2 col-md-offset-2' styleName='copyright'>
+        <Icon iconAjusting='iconAjusting' iconType='iconText' />
+        <div className='col-xs-7' styleName='info'>Adicionar Texto Livre</div>
+        <div className='col-xs-2 col-xs-offset-2' styleName='copyright'>
           Powered by <b>Memed</b>
         </div>
       </footer>

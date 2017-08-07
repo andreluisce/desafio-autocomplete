@@ -8,13 +8,13 @@ class Price extends Component {
   render () {
     if (this.props.precoMax === this.props.precoMin) {
       return (
-        <div className='col-md-2' styleName='price'>
+        <div styleName='price'>
           {PriceFormat(this.props.precoMax)}
         </div>
       )
     }
     return (
-      <div className='col-md-2' styleName='price'>
+      <div styleName='price'>
         <div styleName='priceFrom'>
           {`de ${PriceFormat(this.props.precoMin)}`}
         </div>

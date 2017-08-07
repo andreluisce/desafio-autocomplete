@@ -22,6 +22,11 @@
         }
     }
     
+    .info {
+        padding-top: 30px;
+        @include open-sans-semi-bold();
+    }
+    
     .copyright {
         text-align: right;
         color: $light-gray;

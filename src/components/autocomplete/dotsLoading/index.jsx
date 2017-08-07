@@ -10,7 +10,7 @@ class DotsLoading extends Component {
     return (
       <div>
         <div styleName='loading'></div>
-        <div className={`${styles.spinner} ${this.props.loading ? styles.show : styles.hide}`}></div>
+        <div className={`${styles.spinner} ${this.props.loading ? 'show' : 'hide'}`}></div>
       </div >
     )
   }

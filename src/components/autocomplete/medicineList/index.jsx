@@ -18,6 +18,7 @@ class MedicineList extends Component {
     } else {
       filterList = itemList.filter((item) =>
         item.nome.toLowerCase().includes(this.props.medicineName.toLowerCase()))
+      !filterList.length && filterList.push({ empty: true, id: 1 })
     }
 
     setTimeout(() => {
@@ -29,7 +30,8 @@ class MedicineList extends Component {
           filterList.map(item =>
             <li {...{
               onClick: () => {
-                this.props.dispatch(addMedicine(item))
+                !item.empty &&
+                  this.props.dispatch(addMedicine(item))
               },
               key: item.id
             }}>

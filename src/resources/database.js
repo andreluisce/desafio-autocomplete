@@ -55,7 +55,7 @@ const medicineList = [
     nome: 'Cloridrato de sibutramina 15mg, Cápsula (30un)',
     precoMax: 40.00,
     precoMin: 40.00,
-    principioAtivo: 'Cloridrato de sibutramina 15mg Cloridrato de sibutramina 15mg Cloridrato de sibutramina 15mg Cloridrato de sibutramina 15mg Cloridrato de sibutramina 15mg Cloridrato de sibutramina 15mg Cloridrato de sibutramina 15mg Cloridrato de sibutramina 15mg Cloridrato de sibutramina 15mg',
+    principioAtivo: 'Cloridrato de sibutramina',
     titularidade: 'Genérico',
     thumbUrl: 'assets/imgs/box2.png'
   },

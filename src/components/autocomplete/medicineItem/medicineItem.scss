@@ -40,3 +40,29 @@
 .fabricante {
     font-size: .9em
 }
+
+.empty {
+    @include open-sans-semi-bold()
+}
+
+.titularidadeBox {
+    display: flex !important;
+    div {
+        @include open-sans-semi-bold();
+        background-color: $lighter-gray;
+        border-radius: 5px;
+        font-size: 12px;
+        width: 87px;
+        font-weight: 600;
+        height: 20px;
+        text-align: center;
+        margin-left: 35px;
+        align-items: center;
+        align-self: center;
+    }
+}
+
+.selected {
+    background-color: #eee;
+    padding: 10px auto;
+}

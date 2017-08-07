@@ -2,14 +2,13 @@
 @import "../../../styles/_mixins.scss";
 .header {
     position: relative;
-    width: 80%;
+    width: 100%;
     margin: 50px 0px;
     .title {
         font-size: 30px;
-        text-transform: uppercase;
         color: $dark-gray;
         @include open-sans-bold();
-        letter-spacing: 2px;
         padding-left: 0px;
+        text-align: center
     }
 }

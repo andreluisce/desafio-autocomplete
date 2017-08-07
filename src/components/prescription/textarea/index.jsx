@@ -18,14 +18,8 @@ class TextArea extends Component {
     this.state = {
       linePosition: 18
     }
-    // this.listenScrollEvent = this.listenScrollEvent.bind(this)
   }
-  listenScrollEvent (event) {
-    // console.log('event.target.scrollHeight', event.target.scrollHeight)
-    // console.log('event.target.scrollTop', event.target.scrollTop)
-    // console.log('event.target.clientHeight', event.target.clientHeight)
-    // this.setState({ ...this.state, linePosition: this.state.linePosition - event.target.scrollTop })
-  }
+
   changePosition (el) {
     let start = el.selectionEnd
     let pos = el.value.substr(0, start).split('\n').length
@@ -34,7 +28,7 @@ class TextArea extends Component {
       if (el.clientHeight >= el.scrollHeight) {
         this.setState({ ...this.state, linePosition: (pos * 25) - (5 + el.scrollTop) })
       } else {
-        this.setState({ ...this.state, linePosition: (pos * 25) - (25 + el.scrollTop) })
+        // this.setState({ ...this.state, linePosition: (pos * 25) - (25 + el.scrollTop) })
       }
     } else {
       this.setState({ ...this.state, linePosition: 18 })
@@ -42,21 +36,12 @@ class TextArea extends Component {
   }
 
   handleKeyDown (event) {
-    if (event.keyCode === 8 && this.textInput.value.split('\n').slice(-1)[0].length <= 0) {
+    if ((event.keyCode === 8 && this.textInput.value.split('\n').slice(-1)[0].length <= 0) || event.keyCode === 13) {
       event.preventDefault()
     }
   }
 
   handleChange (event) {
-    // console.log(nextProps)
-    // console.log('Client', event.target.clientHeight)
-    // console.log('Scroll', event.target.scrollHeight)
-
-    // console.log('event.target.scrollHeight', event.target.scrollHeight)
-    // console.log('event.target.scrollTop', event.target.scrollTop)
-    // console.log('event.target.clientHeight', event.target.clientHeight)
-
-    // console.log('LINHA', pos)
     this.changePosition(event.target)
     this.props.changeTextareaValue(event.target.value)
     this.props.setLoadingOn()
@@ -71,12 +56,6 @@ class TextArea extends Component {
   }
 
   componentWillReceiveProps (nextProps) {
-  /* this.setState({
-    ...this.state,
-    textareaValue: nextProps.listPrescrition.map(p => {
-      return `${p.nome} ${p.fabricante}`
-    }).join('\n') + '\n'
-  }) */
     if (nextProps.listPrescrition.length > this.props.listPrescrition.length) {
       this.props.changeTextareaValue(
         nextProps.listPrescrition.map(p => {
@@ -88,7 +67,6 @@ class TextArea extends Component {
   render () {
     return (
       <div styleName='container'>
-        { /* <Icon topOffset={this.state.linePosition} iconAjusting='positionAbsolute' iconType='iconSearch' /> */}
         <textarea
           style={{ backgroundPositionY: this.state.linePosition + 'px' }}
           ref={(input) => { this.textInput = input }}
@@ -96,7 +74,6 @@ class TextArea extends Component {
           onChange={this.handleChange}
           onKeyDown={this.handleKeyDown}
           value={this.props.textareaValue}
-          // onScroll={this.listenScrollEvent}
         >
         </textarea>
         <Autocomplete position={this.state.linePosition} className='col-xs-12' />
