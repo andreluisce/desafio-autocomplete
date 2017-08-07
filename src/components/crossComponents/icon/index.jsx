@@ -7,20 +7,25 @@ import { PropTypes } from 'prop-types'
 class Icon extends Component {
   render () {
     return (
-      <div className={`${this.props.iconAjusting}`} styleName={`${this.props.iconType}`} >
-      </div>
+      <div className={`${this.props.iconAjusting}`
+      } styleName={`${this.props.iconType} `} >
+      </div >
     )
   }
 }
 
 Icon.defaultProps = {
   iconType: '',
-  iconAjusting: ''
+  iconAjusting: '',
+  isPositionAbsolute: false,
+  topOffset: 0
 }
 
 Icon.propTypes = {
   iconType: PropTypes.string,
-  iconAjusting: PropTypes.string
+  iconAjusting: PropTypes.string,
+  isPositionAbsolute: PropTypes.bool,
+  topOffset: PropTypes.number
 }
 
 export default Icon

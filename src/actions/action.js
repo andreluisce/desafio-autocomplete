@@ -3,7 +3,14 @@ import * as actions from './action-types'
 export const changeTextareaValue = (value) => {
   return {
     type: actions.SEARCH_VALUE_CHANGED,
-    payload: value.target.value
+    payload: value
+  }
+}
+
+export const addMedicine = (medicine) => {
+  return {
+    type: actions.MEDICINE_ADDED,
+    payload: medicine
   }
 }
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import CSSModules from 'react-css-modules'
 import styles from './footer.scss'
-import Icon from './icon'
+import Icon from '../../crossComponents/icon'
 
 @CSSModules(styles)
 class Footer extends Component {

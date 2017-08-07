@@ -3,8 +3,30 @@
 .textbox {
     width: 600px;
     height: 350px;
-    padding: 20px;
+    padding: 20px 40px 20px;
     line-height: 25px;
     border-radius: 5px;
+    background-position: 3px 18px;
+    background-size: auto 30px;
+    background-repeat: no-repeat;
     @include open-sans-bold();
+}
+
+.container {
+    position: relative
+}
+
+.search {
+    background-image: url('/assets/imgs/search_icon.png');
+}
+
+.text {
+    background-image: url('/assets/imgs/text_icon.png');
+}
+
+:global {
+    .positionAbsolute {
+        position: absolute;
+        left: 5px
+    }
 }

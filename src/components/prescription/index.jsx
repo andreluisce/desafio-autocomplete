@@ -8,7 +8,7 @@ import styles from './prescription.scss'
 class Prescription extends Component {
   render () {
     return (
-      <div>
+      <div className={this.props.className}>
         <Header />
         <TextArea />
       </div>

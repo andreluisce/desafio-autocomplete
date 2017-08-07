@@ -56,16 +56,14 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     extractTextPlugin,
     new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify('production')
-      }
-    }),
-    new webpack.optimize.UglifyJsPlugin({
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
+    })
+    /* new webpack.optimize.UglifyJsPlugin({
       cacheFolder: resolve(`${__dirname}'public'`),
       debug: true,
       compress: { warnings: false },
       output: { comments: false },
       sourceMap: true
-    })
+    }) */
   ]
 }

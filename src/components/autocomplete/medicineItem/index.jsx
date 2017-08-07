@@ -8,7 +8,7 @@ import styles from './medicineItem.scss'
 class MedicineItem extends Component {
   render () {
     return (
-      <li className='row' styleName='item'>
+      <div className='row' styleName='item'>
         <figure className='col-md-1' styleName='image' >
           <img {... { src: `${this.props.thumbUrl}` } } />
         </figure>
@@ -23,7 +23,7 @@ class MedicineItem extends Component {
           <div styleName='titularidade'>{this.props.titularidade}</div>
         </div>
         <Price {...{ precoMax: this.props.precoMax, precoMin: this.props.precoMin }} />
-      </li>
+      </div>
     )
   }
 }

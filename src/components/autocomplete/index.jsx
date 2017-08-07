@@ -10,7 +10,7 @@ import styles from './autocomplete.scss'
 class Autocomplete extends Component {
   render () {
     return (
-      <div styleName='autocomplete'>
+      <div style={{ top: this.props.position + 50, padding: '0px' }} className='col-xs-12' styleName='autocomplete' >
         <Header />
         <MedicineList />
         <Footer />

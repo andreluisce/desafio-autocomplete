@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Autocomplete from '../components/autocomplete'
 import Prescription from '../components/prescription'
 
 class App extends Component {
@@ -7,10 +6,7 @@ class App extends Component {
     return (
       <div className='container'>
         <div className='row'>
-          <div className='col-10'>
-            <Prescription />
-            <Autocomplete />
-          </div>
+          <Prescription className='col-xs-12' />
         </div>
       </div >
     )

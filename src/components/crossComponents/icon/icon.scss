@@ -1,11 +1,11 @@
-    @import "../../../../styles/_variables.scss";
-    @import "../../../../styles/_mixins.scss";
+    @import "../../../styles/_variables.scss";
+    @import "../../../styles/_mixins.scss";
     .iconText,
     .iconSearch {
         height: 30px;
         width: 30px;
         border-radius: 50%;
-        background-color: $lighter-gray;
+        background-color: $light-gray;
         font-size: 20px;
         text-align: center;
         align-self: center;
@@ -19,6 +19,9 @@
     }
     
     .iconSearch {
+        background-color: $dark-gray;
+        color: $white;
+        @include open-sans-regular();
         &:after {
             font-family: "Material Icons";
             content: "\E8B6"

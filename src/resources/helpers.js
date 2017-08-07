@@ -6,7 +6,6 @@ import thunk from 'redux-thunk'
 import reducers from '../reducers/mainReducer'
 
 export const getStore = () => {
-  debugger
   const middleware = process.env.NODE_ENV !== 'production'
     ? [require('redux-immutable-state-invariant').default(), promise, thunk]
     : [promise, thunk]

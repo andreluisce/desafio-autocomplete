@@ -1,5 +1,6 @@
 const medicineList = [
   {
+    id: '01',
     fabricante: 'Roche',
     nome: 'Roacutan 20mg, Cápsula (30un)',
     precoMax: 22.10,
@@ -9,6 +10,7 @@ const medicineList = [
     thumbUrl: 'assets/imgs/box1.png'
   },
   {
+    id: '02',
     fabricante: 'Sundown Vitaminas',
     nome: 'Vitamina C, comprimido (100un)',
     precoMax: 45.15,
@@ -18,6 +20,7 @@ const medicineList = [
     thumbUrl: 'assets/imgs/box1.png'
   },
   {
+    id: '03',
     fabricante: 'Sundown Vitaminas',
     nome: 'Vitamina C, comprimido (180un)',
     precoMax: 10.00,
@@ -27,6 +30,7 @@ const medicineList = [
     thumbUrl: 'assets/imgs/box2.png'
   },
   {
+    id: '04',
     fabricante: 'EMS Sigma Pharma',
     nome: 'Itraspor 100mg, Cápsula (15un)',
     precoMax: 209.00,
@@ -36,6 +40,7 @@ const medicineList = [
     thumbUrl: 'assets/imgs/box2.png'
   },
   {
+    id: '05',
     fabricante: 'EMS Sigma Pharma',
     nome: 'Itraspor 100mg, Cápsula (28un)',
     precoMax: 15.00,
@@ -45,6 +50,7 @@ const medicineList = [
     thumbUrl: 'assets/imgs/box1.png'
   },
   {
+    id: '06',
     fabricante: 'Abbott',
     nome: 'Cloridrato de sibutramina 15mg, Cápsula (30un)',
     precoMax: 40.00,
@@ -54,6 +60,7 @@ const medicineList = [
     thumbUrl: 'assets/imgs/box2.png'
   },
   {
+    id: '07',
     fabricante: 'Abbott',
     nome: 'Cloridrato de sibutramina 15mg, Cápsula (100un)',
     precoMax: 200.00,

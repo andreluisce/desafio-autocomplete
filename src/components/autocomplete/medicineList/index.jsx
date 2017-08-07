@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import CSSModules from 'react-css-modules'
 import MedicineItem from '../medicineItem'
-import { setLoadingOff } from '../../../actions/action.js'
+import { setLoadingOff, addMedicine } from '../../../actions/action.js'
 
 import itemList from '../../../resources/database.js'
 import { ToSeo } from '../../../resources/helpers.js'
@@ -13,7 +13,6 @@ import styles from './medicineList.scss'
 class MedicineList extends Component {
   render () {
     let filterList = []
-
     if (this.props.medicineName.length <= 0) {
       filterList = itemList
     } else {
@@ -22,13 +21,20 @@ class MedicineList extends Component {
     }
 
     setTimeout(() => {
-      this.props.setLoadingOff()
-    }, 1000)
+      this.props.dispatch(setLoadingOff())
+    }, 500)
     return (
       <ul styleName='item'>
         {
           filterList.map(item =>
-            <MedicineItem {...{ ...item }} />
+            <li {...{
+              onClick: () => {
+                this.props.dispatch(addMedicine(item))
+              },
+              key: item.id
+            }}>
+              <MedicineItem {...{ ...item }} />
+            </li>
           )
         }
       </ul>
@@ -37,12 +43,10 @@ class MedicineList extends Component {
 }
 
 const mapStateToProps = state => {
+  console.log(state)
   return {
-    medicineName: state.searchMedicine.searchValue
+    medicineName: state.searchMedicine.searchValue.split('\n').slice(-1)[0]
   }
 }
 
-const mapDispatchToProps = dispatch =>
-  bindActionCreators({ setLoadingOff }, dispatch)
-
-export default connect(mapStateToProps, mapDispatchToProps)(MedicineList)
+export default connect(mapStateToProps)(MedicineList)
